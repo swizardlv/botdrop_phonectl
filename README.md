@@ -32,6 +32,13 @@ BotDrop (终端) → adb shell (localhost:5555) → uinput_touch → /dev/uinput
 
 ## 快速开始
 
+### 0. 准备
+```bash
+brew install hudochenkov/sshpass/sshpass
+brew install scrcpy 
+brew install --cask android-commandlinetools 
+```
+
 ### 1. 编译 uinput_touch
 
 ```bash
@@ -53,10 +60,10 @@ adb tcpip 5555
 ```
 
 ### 3. 安装到 BotDrop
-
+先替换以下脚本中的 <username> (可以在botdrop终端通过whoami获取) <password> <yourip> 都可以在botdrop 页面获取。
 ```bash
 # 通过 SSH 复制控制脚本
-sshpass -p 'passw0rd' scp -P 8022 phonectl.sh u0_a240@<phone_ip>:/data/data/app.botdrop/files/usr/bin/phonectl
+sshpass -p '<password>' scp -P 8022 phonectl.sh <username>@<phone_ip>:/data/data/app.botdrop/files/usr/bin/phonectl
 ```
 
 > 详细步骤见 [setup.md](setup.md)
