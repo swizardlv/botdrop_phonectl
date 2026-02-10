@@ -68,6 +68,9 @@ sshpass -p '<password>' scp -P 8022 phonectl.sh <username>@<phone_ip>:/data/data
 
 > 详细步骤见 [setup.md](setup.md)
 
+### 4. 教会 openclaw
+在 openclaw 的聊天窗口，把 instrutction.md 的内容发送给 openclaw 。它会把这些指令存储在 TOOLS.md 中
+
 ## 使用示例
 
 ```bash
