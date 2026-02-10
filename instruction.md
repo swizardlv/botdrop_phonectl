@@ -52,7 +52,7 @@ sleep 2
 phonectl shell "ls -t /sdcard/DCIM/Camera/ | head -1"
 
 # 4. 复制照片到 BotDrop home 目录（方便读取）
-cp /sdcard/DCIM/Camera/IMG_xxxx.jpg ~/photo.jpg
+phonectl shell "cat /sdcard/DCIM/Camera/IMG_xxxx.jpg" >~/photo.jpg
 ```
 
 ### 相机界面常用坐标
